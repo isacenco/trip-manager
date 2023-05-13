@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 final class MapListWorker: MapWorkerProtocol {
     var routes: [RouteModel] = []
@@ -65,5 +66,30 @@ final class MapListWorker: MapWorkerProtocol {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         return formatter.date(from: value)
+    }
+    
+    func getAnnotationsFor(_ index: Int) -> [MKPointAnnotation] {
+        guard let model = routeAtIndex(index) else { return [] }
+        
+        var annotations: [MKPointAnnotation] = []
+        
+        let startAnn: MKPointAnnotation = MKPointAnnotation()
+        startAnn.coordinate = CLLocationCoordinate2D(latitude: model.origin.coords.lat, longitude: model.origin.coords.lon)
+        startAnn.title = model.origin.address
+        annotations.append(startAnn)
+        
+        let endAnn: MKPointAnnotation = MKPointAnnotation()
+        endAnn.coordinate = CLLocationCoordinate2D(latitude: model.destination.coords.lat, longitude: model.destination.coords.lon)
+        endAnn.title = model.destination.address
+        annotations.append(endAnn)
+        
+        for stop in model.stops {
+            let ann: MKPointAnnotation = MKPointAnnotation()
+            ann.coordinate = CLLocationCoordinate2D(latitude: stop.coords.lat, longitude: stop.coords.lon)
+            ann.title = "\(stop.id)"
+            annotations.append(ann)
+        }
+        
+        return annotations
     }
 }

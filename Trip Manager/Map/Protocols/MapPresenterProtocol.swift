@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import MapKit
 
 protocol MapPresenterProtocol: class {
     func startLoading()
     func showFetchResult()
-    
+    func showAnnotations(_ annotations: [MKPointAnnotation])
 }

@@ -33,6 +33,14 @@ class MapViewController: UIViewController {
         self.setCollectionViewAdditionalParams()
         self.registerCells()
         self.interactor?.fetchRoutes()
+
+    }
+    
+    func showAnnotations(_ annotations: [MKPointAnnotation]) {
+        let previousAnnotations = mapView.annotations.filter({ !($0 is MKUserLocation) })
+        mapView.removeAnnotations(previousAnnotations)
+        self.mapView.showAnnotations(annotations, animated: true)
+        
     }
 }
 

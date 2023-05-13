@@ -41,4 +41,8 @@ final class MapInteractor: MapInteractorProtocol {
     func routeAtIndex(_ index: Int) -> RouteModel? {
         mapWorker?.routeAtIndex(index)
     }
+    
+    func selectRoute(_ index: Int) {
+        self.presenter?.showAnnotations(self.mapWorker?.getAnnotationsFor(index) ?? [])
+    }
 }

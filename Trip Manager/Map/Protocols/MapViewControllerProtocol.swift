@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import MapKit
 
 protocol MapViewControllerProtocol: class {
     func startLoading()
     func stopLoading()
     func updateListRoutes()
+    func showAnnotations(_ annotations: [MKPointAnnotation])
 }

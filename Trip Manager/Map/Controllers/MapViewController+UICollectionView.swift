@@ -41,4 +41,8 @@ extension MapViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         return 0
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.interactor?.selectRoute(indexPath.row)
+    }
+    
 }

@@ -19,6 +19,7 @@ class RouteCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblFihishTime: UILabel!
     @IBOutlet weak var lblStops: UILabel!
     
+    
     @IBOutlet weak var lblFinishName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,7 +27,7 @@ class RouteCollectionViewCell: UICollectionViewCell {
     }
     
     func setup(with model: RouteModel) {
-        innerView.layer.cornerRadius = 4
+        innerView.layer.cornerRadius = 8
         innerView.layer.borderWidth = 1
         innerView.layer.borderColor = UIColor.lightGray.cgColor
         
@@ -39,6 +40,16 @@ class RouteCollectionViewCell: UICollectionViewCell {
         lblStartTime.text = model.startTimeFormatted()
         lblFihishTime.text = model.endTimeFormatted()
         lblStops.text = "\(model.stops.count) Stops"
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                innerView.layer.borderColor = UIColor.green.cgColor
+            } else {
+                innerView.layer.borderColor = UIColor.lightGray.cgColor
+            }
+        }
     }
 
 }
