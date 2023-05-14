@@ -19,9 +19,9 @@ class MapViewController: UIViewController {
         super.init(coder: coder)
         
         let presenter = MapPresenter(viewController: self)
-        let listRestWorker = MapListRestWorker()
-        let mapWorker = MapListWorker()
-        let interactor = MapInteractor(presenter: presenter, listRestWorker: listRestWorker, mapWorker: mapWorker)
+        let listRestWorker = TripsRestWorker()
+        let mapWorker = MapWorker()
+        let interactor = MapInteractor(presenter: presenter, tripsRestWorker: listRestWorker, mapWorker: mapWorker)
         
         self.interactor = interactor
     }
@@ -42,7 +42,9 @@ class MapViewController: UIViewController {
     }
     
     private func configure() {
+        mapView.delegate = self
         mapView.layoutMargins = UIEdgeInsets(top: self.view.safeAreaInsets.top, left: 0, bottom: self.view.safeAreaInsets.bottom + self.collectionView.frame.size.height, right: 0)
+        //mapView.register(MKAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
     }
 }
 
@@ -57,5 +59,23 @@ extension MapViewController: MapViewControllerProtocol {
     
     func updateListRoutes() {
         collectionView.reloadData()
+    }
+}
+
+extension MapViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let stopView = Bundle.main.loadNibNamed("StopView", owner: self, options: nil)?.first as? StopView else { return }
+        guard let id = (mapView.selectedAnnotations.first as? StopPointAnnotation)?.identifier else { return }
+        
+        stopView.setUp(id: id)
+        
+        view.addSubview(stopView)
+    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        if let stopView = view.subviews.filter({ $0 is StopView }).first as? StopView {
+            stopView.removeFromSuperview()
+        }
     }
 }

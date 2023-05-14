@@ -10,6 +10,6 @@ import Foundation
 protocol MapInteractorProtocol: class {
     func fetchRoutes()
     func totalRoutes() -> Int
-    func routeAtIndex(_ index: Int) -> RouteModel?
+    func routeAtIndex(_ index: Int) -> TripModel?
     func selectRoute(_ index: Int)
 }
