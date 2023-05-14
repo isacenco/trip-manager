@@ -9,6 +9,8 @@ import UIKit
 
 class RouteCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var lblRouteName: UILabel!
+    @IBOutlet weak var lblRouteStatus: UILabel!
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var lblDriver: UILabel!
     @IBOutlet weak var lblDriverName: UILabel!
@@ -30,7 +32,13 @@ class RouteCollectionViewCell: UICollectionViewCell {
         innerView.layer.cornerRadius = 8
         innerView.layer.borderWidth = 1
         innerView.layer.borderColor = UIColor.lightGray.cgColor
+        innerView.layer.shadowColor = UIColor.gray.cgColor
+        innerView.layer.shadowOpacity = 1
+        innerView.layer.shadowOffset = .zero
+        innerView.layer.shadowRadius = 6
         
+        lblRouteName.text = model.description
+        lblRouteStatus.text = model.statusFormatted()
         lblDriver.text = "Driver:"
         lblDriverName.text = model.driverName
         lblStart.text = "From:"

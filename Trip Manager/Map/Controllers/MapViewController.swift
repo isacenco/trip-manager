@@ -29,18 +29,20 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.configure()
         self.setCollectionViewAdditionalParams()
         self.registerCells()
         self.interactor?.fetchRoutes()
-
     }
     
     func showAnnotations(_ annotations: [MKPointAnnotation]) {
         let previousAnnotations = mapView.annotations.filter({ !($0 is MKUserLocation) })
         mapView.removeAnnotations(previousAnnotations)
-        self.mapView.showAnnotations(annotations, animated: true)
-        
+        self.mapView.showAnnotations(annotations, animated: false)
+    }
+    
+    private func configure() {
+        mapView.layoutMargins = UIEdgeInsets(top: self.view.safeAreaInsets.top, left: 0, bottom: self.view.safeAreaInsets.bottom + self.collectionView.frame.size.height, right: 0)
     }
 }
 
