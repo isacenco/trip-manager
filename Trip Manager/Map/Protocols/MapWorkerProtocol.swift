@@ -9,8 +9,8 @@ import Foundation
 import MapKit
 
 protocol MapWorkerProtocol: class {
-    func mapRoutes(_ routes: [RouteRestModel])
+    func mapRoutes(_ routes: [TripRestModel])
     func totalRoutes() -> Int
-    func routeAtIndex(_ index: Int) -> RouteModel?
+    func routeAtIndex(_ index: Int) -> TripModel?
     func getAnnotationsFor(_ index: Int) -> [MKPointAnnotation]
 }

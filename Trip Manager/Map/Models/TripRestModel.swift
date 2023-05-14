@@ -1,5 +1,5 @@
 //
-//  MapListRestModel.swift
+//  TripRestModel.swift
 //  Trip Manager
 //
 //  Created by Ghenadie Isacenco on 13/5/23.
@@ -16,7 +16,7 @@ public enum RestResult<T, U> {
 public typealias RestResponse<Value> = ((RestResult<Value, NSError>) -> Void)
 
     // MARK: - Route
-struct RouteRestModel: Codable {
+struct TripRestModel: Codable {
     let driverName, status, route, startTime: String?
     let origin: PointRestModel?
     let description: String?
