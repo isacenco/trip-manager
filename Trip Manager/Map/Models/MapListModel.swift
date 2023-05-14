@@ -1,5 +1,5 @@
 //
-//  TripModel.swift
+//  MapListModel.swift
 //  Trip Manager
 //
 //  Created by Ghenadie Isacenco on 13/5/23.
@@ -8,14 +8,14 @@
 import Foundation
 import MapKit
 
-enum TripStatus {
+enum RouteStatus {
     case ongoing
     case scheduled
     case cancelled
     case finalized
     case unkown
     
-    static func getStatusFromString(_ value: String) -> TripStatus {
+    static func getStatusFromString(_ value: String) -> RouteStatus {
         switch value {
         case "ongoing":
             return .ongoing
@@ -31,10 +31,10 @@ enum TripStatus {
     }
 }
 
-struct TripModel {
+struct RouteModel {
     let driverName, route, description: String
     let startTime, endTime: Date
-    let status: TripStatus
+    let status: RouteStatus
     let origin, destination: PointModel
     let stops: [StopModel]
     
@@ -74,7 +74,7 @@ class PointModel: CoordsModel {
         return address + super.toString()
     }
     
-    override func toAnnotation() -> StopPointAnnotation {
+    override func toAnnotation() -> MKPointAnnotation {
         let annotation = super.toAnnotation()
         annotation.title = address
         return annotation
@@ -87,12 +87,6 @@ class StopModel: CoordsModel {
     init(lat: Double, lon: Double, id: Int) {
         super.init(lat: lat, lon: lon)
         self.id = id
-    }
-    
-    override func toAnnotation() -> StopPointAnnotation {
-        let annotation: StopPointAnnotation = super.toAnnotation()
-        annotation.identifier = id
-        return annotation
     }
 }
 
@@ -108,8 +102,8 @@ class CoordsModel {
         return "\(lat), \(lon)"
     }
     
-    func toAnnotation() -> StopPointAnnotation {
-        let annotation = StopPointAnnotation()
+    func toAnnotation() -> MKPointAnnotation {
+        let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
         return annotation
     }
