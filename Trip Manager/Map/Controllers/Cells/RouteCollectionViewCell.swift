@@ -25,10 +25,7 @@ class RouteCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblFinishName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-    
-    func setup(with model: RouteModel) {
+        
         innerView.layer.cornerRadius = 8
         innerView.layer.borderWidth = 1
         innerView.layer.borderColor = UIColor.lightGray.cgColor
@@ -36,7 +33,9 @@ class RouteCollectionViewCell: UICollectionViewCell {
         innerView.layer.shadowOpacity = 1
         innerView.layer.shadowOffset = .zero
         innerView.layer.shadowRadius = 6
-        
+    }
+    
+    func setup(with model: RouteModel) {
         lblRouteName.text = model.description
         lblRouteStatus.text = model.statusFormatted()
         lblDriver.text = "Driver:"
@@ -59,5 +58,4 @@ class RouteCollectionViewCell: UICollectionViewCell {
             }
         }
     }
-
 }

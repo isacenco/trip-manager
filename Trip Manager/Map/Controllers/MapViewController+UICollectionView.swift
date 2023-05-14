@@ -11,9 +11,6 @@ extension MapViewController: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func registerCells() {
         self.collectionView.registerCellNib(RouteCollectionViewCell.self)
-        //self.collectionView.register(RouteCollectionViewCell.self, forCellWithReuseIdentifier: "RouteCollectionViewCell")
-//        self.collectionView.register(UINib(nibName: "RouteCollectionViewCell", bundle: nil), forSupplementaryViewOfKind: "RouteCollectionViewCell", withReuseIdentifier: "RouteCollectionViewCell")
-        
     }
     
     func setCollectionViewAdditionalParams() {
@@ -32,7 +29,6 @@ extension MapViewController: UICollectionViewDelegate, UICollectionViewDataSourc
         return cell
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
     }
@@ -44,5 +40,4 @@ extension MapViewController: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.interactor?.selectRoute(indexPath.row)
     }
-    
 }

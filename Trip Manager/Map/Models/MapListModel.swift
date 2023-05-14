@@ -60,8 +60,6 @@ struct RouteModel {
             return "Unknown"
         }
     }
-    
-    
 }
 
 class PointModel: CoordsModel {
