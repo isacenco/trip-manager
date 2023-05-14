@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 final class MapListWorker: MapWorkerProtocol {
     var routes: [RouteModel] = []
@@ -14,43 +15,32 @@ final class MapListWorker: MapWorkerProtocol {
         
         self.routes.removeAll()
         
-        for route in routes {
-            guard let name = route.driverName else { continue }
-            guard let routePolyString = route.route else { continue }
-            guard let description = route.description else { continue }
-            guard let sTime = route.startTime, let sTimeDate = utcStringToDate(sTime) else { continue }
-            guard let eTime = route.endTime, let eTimeDate = utcStringToDate(eTime) else { continue }
-            guard let status = route.status else { continue }
-            var statusEnum: RouteStatus = .unkown
-            switch status {
-            case "ongoing":
-                statusEnum = .ongoing
-            case "scheduled":
-                statusEnum = .scheduled
-            case "cancelled":
-                statusEnum = .cancelled
-            case "finalized":
-                statusEnum = .finalized
-            default:
-                statusEnum = .unkown
-            }
-            
-            guard let orig = route.origin, let lat = orig.point?.latitude, let lon = orig.point?.longitude else { continue }
-            let origModel = PointModel(coords: CoordsModel(lat: lat, lon: lon), address: orig.address ?? "")
-            
-            guard let dest = route.destination, let lat = dest.point?.latitude, let lon = dest.point?.longitude else { continue }
-            let destModel = PointModel(coords: CoordsModel(lat: lat, lon: lon), address: dest.address ?? "")
-            
-            guard let stops = route.stops else { continue }
-            
-            var stopsObj: [StopModel] = []
-            for stop in stops {
-                guard let lat = stop.point?.latitude, let lon = stop.point?.longitude, let id = stop.id else { continue }
-                stopsObj.append(StopModel(coords: CoordsModel(lat: lat, lon: lon), id: id))
-            }
-            
-            self.routes.append(RouteModel(driverName: name, route: routePolyString, description: description, startTime: sTimeDate, endTime: eTimeDate, status: statusEnum, origin: origModel, destination: destModel, stops: stopsObj))
-        }
+        let filteredRoutes = routes.filter({
+            $0.origin?.point?.latitude != nil &&
+            $0.origin?.point?.longitude != nil &&
+            $0.destination?.point?.latitude != nil &&
+            $0.destination?.point?.longitude != nil
+        })
+        
+        let newRoutes = filteredRoutes.compactMap({
+            RouteModel(driverName: $0.driverName ?? "",
+                       route: $0.route ?? "",
+                       description: $0.description ?? "",
+                       startTime: Utils.utcStringToDate($0.startTime ?? "") ?? Date(),
+                       endTime: Utils.utcStringToDate($0.endTime ?? "") ?? Date(),
+                       status: RouteStatus.getStatusFromString($0.status ?? ""),
+                       origin: PointModel(lat: $0.origin?.point?.latitude ?? 0, lon: $0.origin?.point?.longitude ?? 0, address: $0.origin?.address ?? ""),
+                       destination: PointModel(lat: $0.destination?.point?.latitude ?? 0, lon: $0.destination?.point?.longitude ?? 0, address: $0.destination?.address ?? ""),
+                       stops: ($0.stops ?? []).filter({
+                $0.point?.latitude != nil &&
+                $0.point?.longitude != nil
+            }).compactMap({
+                StopModel(lat: $0.point?.latitude ?? 0, lon: $0.point?.longitude ?? 0, id: $0.id ?? -1)
+            })
+            )
+        })
+        
+        self.routes = newRoutes
     }
     
     func totalRoutes() -> Int {
@@ -61,9 +51,17 @@ final class MapListWorker: MapWorkerProtocol {
         return routes.indices.contains(index) ? routes[index] : nil
     }
     
-    func utcStringToDate(_ value: String) -> Date? {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        return formatter.date(from: value)
+    func getAnnotationsFor(_ index: Int) -> [MKPointAnnotation] {
+        guard let model = routeAtIndex(index) else { return [] }
+        
+        var annotations: [MKPointAnnotation] = []
+        
+        annotations.append(model.origin.toAnnotation())
+        annotations.append(model.destination.toAnnotation())
+
+        let stopsAnnotations = model.stops.compactMap({ $0.toAnnotation() })
+        annotations.append(contentsOf: stopsAnnotations)
+        
+        return annotations
     }
 }

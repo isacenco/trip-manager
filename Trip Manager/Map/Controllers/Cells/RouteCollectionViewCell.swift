@@ -9,6 +9,8 @@ import UIKit
 
 class RouteCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var lblRouteName: UILabel!
+    @IBOutlet weak var lblRouteStatus: UILabel!
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var lblDriver: UILabel!
     @IBOutlet weak var lblDriverName: UILabel!
@@ -19,17 +21,23 @@ class RouteCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblFihishTime: UILabel!
     @IBOutlet weak var lblStops: UILabel!
     
+    
     @IBOutlet weak var lblFinishName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        innerView.layer.cornerRadius = 8
+        innerView.layer.borderWidth = 1
+        innerView.layer.borderColor = UIColor.lightGray.cgColor
+        innerView.layer.shadowColor = UIColor.gray.cgColor
+        innerView.layer.shadowOpacity = 1
+        innerView.layer.shadowOffset = .zero
+        innerView.layer.shadowRadius = 6
     }
     
     func setup(with model: RouteModel) {
-        innerView.layer.cornerRadius = 4
-        innerView.layer.borderWidth = 1
-        innerView.layer.borderColor = UIColor.lightGray.cgColor
-        
+        lblRouteName.text = model.description
+        lblRouteStatus.text = model.statusFormatted()
         lblDriver.text = "Driver:"
         lblDriverName.text = model.driverName
         lblStart.text = "From:"
@@ -40,5 +48,14 @@ class RouteCollectionViewCell: UICollectionViewCell {
         lblFihishTime.text = model.endTimeFormatted()
         lblStops.text = "\(model.stops.count) Stops"
     }
-
+    
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                innerView.layer.borderColor = UIColor.green.cgColor
+            } else {
+                innerView.layer.borderColor = UIColor.lightGray.cgColor
+            }
+        }
+    }
 }
