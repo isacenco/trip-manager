@@ -23,9 +23,9 @@
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Mm-l6-T48">
-                                <rect key="frame" x="0.0" y="628" width="375" height="144"/>
+                                <rect key="frame" x="0.0" y="605" width="375" height="173"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="144" id="07E-4Q-Flb"/>
+                                    <constraint firstAttribute="height" constant="173" id="07E-4Q-Flb"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TVu-6H-1t0">
                                     <size key="itemSize" width="375" height="198"/>
@@ -48,7 +48,7 @@
                             <constraint firstItem="gmO-bB-2C7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CgW-dC-W1A"/>
                             <constraint firstItem="8Mm-l6-T48" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EX8-F0-bBn"/>
                             <constraint firstItem="gmO-bB-2C7" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Owg-9q-RUM"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8Mm-l6-T48" secondAttribute="bottom" constant="6" id="aEp-hr-Itf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8Mm-l6-T48" secondAttribute="bottom" id="aEp-hr-Itf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gmO-bB-2C7" secondAttribute="trailing" id="lhc-qF-mTg"/>
                         </constraints>
                     </view>
