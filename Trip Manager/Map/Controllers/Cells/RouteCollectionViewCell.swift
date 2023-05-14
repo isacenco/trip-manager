@@ -35,7 +35,7 @@ class RouteCollectionViewCell: UICollectionViewCell {
         innerView.layer.shadowRadius = 6
     }
     
-    func setup(with model: TripModel) {
+    func setup(with model: RouteModel) {
         lblRouteName.text = model.description
         lblRouteStatus.text = model.statusFormatted()
         lblDriver.text = "Driver:"
