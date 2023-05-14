@@ -13,6 +13,12 @@
 		E102DE062A0FF97C00E3EC5E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE052A0FF97C00E3EC5E /* Utils.swift */; };
 		E102DE082A0FF9BD00E3EC5E /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE072A0FF9BD00E3EC5E /* UICollectionViewExtensions.swift */; };
 		E102DE0A2A0FFA2500E3EC5E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE092A0FFA2500E3EC5E /* UIViewExtension.swift */; };
+		E102DE0C2A11168A00E3EC5E /* StopRestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE0B2A11168A00E3EC5E /* StopRestModel.swift */; };
+		E102DE0E2A11177D00E3EC5E /* StopRestWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE0D2A11177D00E3EC5E /* StopRestWorker.swift */; };
+		E102DE102A11183200E3EC5E /* StopRestWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE0F2A11183200E3EC5E /* StopRestWorkerProtocol.swift */; };
+		E102DE132A111F8E00E3EC5E /* StopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE122A111F8E00E3EC5E /* StopView.swift */; };
+		E102DE152A111FBA00E3EC5E /* StopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E102DE142A111FBA00E3EC5E /* StopView.xib */; };
+		E102DE182A11375900E3EC5E /* StopPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE172A11375900E3EC5E /* StopPointAnnotation.swift */; };
 		E15DE75D2A0F9DCC00E5AD30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE75C2A0F9DCC00E5AD30 /* AppDelegate.swift */; };
 		E15DE75F2A0F9DCC00E5AD30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE75E2A0F9DCC00E5AD30 /* SceneDelegate.swift */; };
 		E15DE7612A0F9DCC00E5AD30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE7602A0F9DCC00E5AD30 /* ViewController.swift */; };
@@ -29,14 +35,14 @@
 		E15DE79B2A0FB7A800E5AD30 /* MapInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE79A2A0FB7A800E5AD30 /* MapInteractorProtocol.swift */; };
 		E15DE79D2A0FB85100E5AD30 /* MapViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE79C2A0FB85100E5AD30 /* MapViewControllerProtocol.swift */; };
 		E15DE79F2A0FB9E000E5AD30 /* MapPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE79E2A0FB9E000E5AD30 /* MapPresenterProtocol.swift */; };
-		E15DE7A22A0FBC7900E5AD30 /* MapListRestWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE7A12A0FBC7900E5AD30 /* MapListRestWorker.swift */; };
-		E15DE7A42A0FBD9B00E5AD30 /* MapListRestWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE7A32A0FBD9B00E5AD30 /* MapListRestWorkerProtocol.swift */; };
-		E15DE7A72A0FBF3400E5AD30 /* MapListRestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE7A62A0FBF3400E5AD30 /* MapListRestModel.swift */; };
+		E15DE7A22A0FBC7900E5AD30 /* TripsRestWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE7A12A0FBC7900E5AD30 /* TripsRestWorker.swift */; };
+		E15DE7A42A0FBD9B00E5AD30 /* TripListRestWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE7A32A0FBD9B00E5AD30 /* TripListRestWorkerProtocol.swift */; };
+		E15DE7A72A0FBF3400E5AD30 /* TripRestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE7A62A0FBF3400E5AD30 /* TripRestModel.swift */; };
 		E15DE7AB2A0FD1D500E5AD30 /* RouteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE7A92A0FD1D500E5AD30 /* RouteCollectionViewCell.swift */; };
 		E15DE7AC2A0FD1D500E5AD30 /* RouteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15DE7AA2A0FD1D500E5AD30 /* RouteCollectionViewCell.xib */; };
 		E15DE7AE2A0FD28800E5AD30 /* MapViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE7AD2A0FD28800E5AD30 /* MapViewController+UICollectionView.swift */; };
-		E1AED9322A0FDEE900D18204 /* MapListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AED9312A0FDEE900D18204 /* MapListModel.swift */; };
-		E1AED9342A0FE2AC00D18204 /* MapListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AED9332A0FE2AC00D18204 /* MapListWorker.swift */; };
+		E1AED9322A0FDEE900D18204 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AED9312A0FDEE900D18204 /* TripModel.swift */; };
+		E1AED9342A0FE2AC00D18204 /* MapWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AED9332A0FE2AC00D18204 /* MapWorker.swift */; };
 		E1AED9362A0FE35400D18204 /* MapWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AED9352A0FE35400D18204 /* MapWorkerProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +74,12 @@
 		E102DE052A0FF97C00E3EC5E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E102DE072A0FF9BD00E3EC5E /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		E102DE092A0FFA2500E3EC5E /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		E102DE0B2A11168A00E3EC5E /* StopRestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopRestModel.swift; sourceTree = "<group>"; };
+		E102DE0D2A11177D00E3EC5E /* StopRestWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopRestWorker.swift; sourceTree = "<group>"; };
+		E102DE0F2A11183200E3EC5E /* StopRestWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopRestWorkerProtocol.swift; sourceTree = "<group>"; };
+		E102DE122A111F8E00E3EC5E /* StopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopView.swift; sourceTree = "<group>"; };
+		E102DE142A111FBA00E3EC5E /* StopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopView.xib; sourceTree = "<group>"; };
+		E102DE172A11375900E3EC5E /* StopPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPointAnnotation.swift; sourceTree = "<group>"; };
 		E15DE7592A0F9DCC00E5AD30 /* Trip Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trip Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15DE75C2A0F9DCC00E5AD30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E15DE75E2A0F9DCC00E5AD30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,14 +100,14 @@
 		E15DE79A2A0FB7A800E5AD30 /* MapInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorProtocol.swift; sourceTree = "<group>"; };
 		E15DE79C2A0FB85100E5AD30 /* MapViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerProtocol.swift; sourceTree = "<group>"; };
 		E15DE79E2A0FB9E000E5AD30 /* MapPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterProtocol.swift; sourceTree = "<group>"; };
-		E15DE7A12A0FBC7900E5AD30 /* MapListRestWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListRestWorker.swift; sourceTree = "<group>"; };
-		E15DE7A32A0FBD9B00E5AD30 /* MapListRestWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListRestWorkerProtocol.swift; sourceTree = "<group>"; };
-		E15DE7A62A0FBF3400E5AD30 /* MapListRestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListRestModel.swift; sourceTree = "<group>"; };
+		E15DE7A12A0FBC7900E5AD30 /* TripsRestWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsRestWorker.swift; sourceTree = "<group>"; };
+		E15DE7A32A0FBD9B00E5AD30 /* TripListRestWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListRestWorkerProtocol.swift; sourceTree = "<group>"; };
+		E15DE7A62A0FBF3400E5AD30 /* TripRestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRestModel.swift; sourceTree = "<group>"; };
 		E15DE7A92A0FD1D500E5AD30 /* RouteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCollectionViewCell.swift; sourceTree = "<group>"; };
 		E15DE7AA2A0FD1D500E5AD30 /* RouteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteCollectionViewCell.xib; sourceTree = "<group>"; };
 		E15DE7AD2A0FD28800E5AD30 /* MapViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+UICollectionView.swift"; sourceTree = "<group>"; };
-		E1AED9312A0FDEE900D18204 /* MapListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListModel.swift; sourceTree = "<group>"; };
-		E1AED9332A0FE2AC00D18204 /* MapListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListWorker.swift; sourceTree = "<group>"; };
+		E1AED9312A0FDEE900D18204 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		E1AED9332A0FE2AC00D18204 /* MapWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWorker.swift; sourceTree = "<group>"; };
 		E1AED9352A0FE35400D18204 /* MapWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWorkerProtocol.swift; sourceTree = "<group>"; };
 		F16A261B0F0FC60D5840E82A /* Pods_Trip_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trip_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9466BA9E14C757DBE6C879F /* Pods-Trip Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip Manager.release.xcconfig"; path = "Target Support Files/Pods-Trip Manager/Pods-Trip Manager.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +164,23 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		E102DE112A111E4D00E3EC5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE122A111F8E00E3EC5E /* StopView.swift */,
+				E102DE142A111FBA00E3EC5E /* StopView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E102DE162A11374500E3EC5E /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE172A11375900E3EC5E /* StopPointAnnotation.swift */,
+			);
+			path = Annotations;
+			sourceTree = "<group>";
+		};
 		E15DE7502A0F9DCC00E5AD30 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +206,7 @@
 		E15DE75B2A0F9DCC00E5AD30 /* Trip Manager */ = {
 			isa = PBXGroup;
 			children = (
+				E102DE042A0FF97000E3EC5E /* Utils */,
 				E15DE78C2A0FB03400E5AD30 /* Map */,
 				E15DE75C2A0F9DCC00E5AD30 /* AppDelegate.swift */,
 				E15DE75E2A0F9DCC00E5AD30 /* SceneDelegate.swift */,
@@ -209,7 +239,7 @@
 		E15DE78C2A0FB03400E5AD30 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				E102DE042A0FF97000E3EC5E /* Utils */,
+				E102DE162A11374500E3EC5E /* Annotations */,
 				E15DE7A52A0FBF2400E5AD30 /* Models */,
 				E15DE7A02A0FBC6700E5AD30 /* Workers */,
 				E15DE7992A0FB78D00E5AD30 /* Protocols */,
@@ -232,6 +262,7 @@
 		E15DE7902A0FB35800E5AD30 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E102DE112A111E4D00E3EC5E /* Views */,
 				E15DE7A82A0FD1AD00E5AD30 /* Cells */,
 				E15DE7912A0FB37B00E5AD30 /* MapViewController.swift */,
 				E15DE7AD2A0FD28800E5AD30 /* MapViewController+UICollectionView.swift */,
@@ -261,8 +292,9 @@
 				E15DE79A2A0FB7A800E5AD30 /* MapInteractorProtocol.swift */,
 				E15DE79C2A0FB85100E5AD30 /* MapViewControllerProtocol.swift */,
 				E15DE79E2A0FB9E000E5AD30 /* MapPresenterProtocol.swift */,
-				E15DE7A32A0FBD9B00E5AD30 /* MapListRestWorkerProtocol.swift */,
+				E15DE7A32A0FBD9B00E5AD30 /* TripListRestWorkerProtocol.swift */,
 				E1AED9352A0FE35400D18204 /* MapWorkerProtocol.swift */,
+				E102DE0F2A11183200E3EC5E /* StopRestWorkerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -270,8 +302,9 @@
 		E15DE7A02A0FBC6700E5AD30 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
-				E15DE7A12A0FBC7900E5AD30 /* MapListRestWorker.swift */,
-				E1AED9332A0FE2AC00D18204 /* MapListWorker.swift */,
+				E15DE7A12A0FBC7900E5AD30 /* TripsRestWorker.swift */,
+				E1AED9332A0FE2AC00D18204 /* MapWorker.swift */,
+				E102DE0D2A11177D00E3EC5E /* StopRestWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -279,8 +312,9 @@
 		E15DE7A52A0FBF2400E5AD30 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E15DE7A62A0FBF3400E5AD30 /* MapListRestModel.swift */,
-				E1AED9312A0FDEE900D18204 /* MapListModel.swift */,
+				E15DE7A62A0FBF3400E5AD30 /* TripRestModel.swift */,
+				E1AED9312A0FDEE900D18204 /* TripModel.swift */,
+				E102DE0B2A11168A00E3EC5E /* StopRestModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -417,6 +451,7 @@
 				E15DE7662A0F9DCD00E5AD30 /* Assets.xcassets in Resources */,
 				E15DE7AC2A0FD1D500E5AD30 /* RouteCollectionViewCell.xib in Resources */,
 				E15DE7642A0F9DCC00E5AD30 /* Main.storyboard in Resources */,
+				E102DE152A111FBA00E3EC5E /* StopView.xib in Resources */,
 				E15DE78F2A0FB07F00E5AD30 /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,23 +582,28 @@
 			files = (
 				E15DE7612A0F9DCC00E5AD30 /* ViewController.swift in Sources */,
 				E15DE79D2A0FB85100E5AD30 /* MapViewControllerProtocol.swift in Sources */,
-				E1AED9342A0FE2AC00D18204 /* MapListWorker.swift in Sources */,
-				E15DE7A72A0FBF3400E5AD30 /* MapListRestModel.swift in Sources */,
+				E1AED9342A0FE2AC00D18204 /* MapWorker.swift in Sources */,
+				E15DE7A72A0FBF3400E5AD30 /* TripRestModel.swift in Sources */,
 				E15DE7AB2A0FD1D500E5AD30 /* RouteCollectionViewCell.swift in Sources */,
-				E15DE7A22A0FBC7900E5AD30 /* MapListRestWorker.swift in Sources */,
+				E15DE7A22A0FBC7900E5AD30 /* TripsRestWorker.swift in Sources */,
+				E102DE182A11375900E3EC5E /* StopPointAnnotation.swift in Sources */,
 				E1AED9362A0FE35400D18204 /* MapWorkerProtocol.swift in Sources */,
 				E15DE79F2A0FB9E000E5AD30 /* MapPresenterProtocol.swift in Sources */,
 				E15DE75D2A0F9DCC00E5AD30 /* AppDelegate.swift in Sources */,
+				E102DE0C2A11168A00E3EC5E /* StopRestModel.swift in Sources */,
+				E102DE132A111F8E00E3EC5E /* StopView.swift in Sources */,
 				E15DE75F2A0F9DCC00E5AD30 /* SceneDelegate.swift in Sources */,
 				E102DE0A2A0FFA2500E3EC5E /* UIViewExtension.swift in Sources */,
 				E15DE7AE2A0FD28800E5AD30 /* MapViewController+UICollectionView.swift in Sources */,
 				E102DE062A0FF97C00E3EC5E /* Utils.swift in Sources */,
-				E1AED9322A0FDEE900D18204 /* MapListModel.swift in Sources */,
-				E15DE7A42A0FBD9B00E5AD30 /* MapListRestWorkerProtocol.swift in Sources */,
+				E102DE102A11183200E3EC5E /* StopRestWorkerProtocol.swift in Sources */,
+				E1AED9322A0FDEE900D18204 /* TripModel.swift in Sources */,
+				E15DE7A42A0FBD9B00E5AD30 /* TripListRestWorkerProtocol.swift in Sources */,
 				E15DE7952A0FB5C600E5AD30 /* MapInteractor.swift in Sources */,
 				E102DE082A0FF9BD00E3EC5E /* UICollectionViewExtensions.swift in Sources */,
 				E15DE7922A0FB37B00E5AD30 /* MapViewController.swift in Sources */,
 				E15DE79B2A0FB7A800E5AD30 /* MapInteractorProtocol.swift in Sources */,
+				E102DE0E2A11177D00E3EC5E /* StopRestWorker.swift in Sources */,
 				E15DE7972A0FB5EE00E5AD30 /* MapPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
