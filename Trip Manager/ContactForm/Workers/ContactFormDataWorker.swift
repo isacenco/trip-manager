@@ -6,8 +6,13 @@
 //
 
 import Foundation
+import CoreData
+import UserNotifications
+import UIKit
 
 final class ContactFormDataWorker: ContactFormDataWorkerProtocol {
+    
+    var reports = [Reports]()
     func validateField(type: ContactFormFieldType, value: String?) -> Bool {
         switch type {
         case .name:
@@ -31,8 +36,24 @@ final class ContactFormDataWorker: ContactFormDataWorkerProtocol {
             validateDescription(model.description) {
             
             
-            return true
-        }
+            let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
+
+            let report = NSEntityDescription.insertNewObject(forEntityName: "Reports", into: managedContext) as! Reports
+            report.name = model.name
+            report.surname = model.surname
+            report.email = model.email
+            report.phone = model.phone
+            report.desc = model.description
+            
+            do {
+                try managedContext.save()
+                setBadge()
+                return true
+            } catch {
+                return false
+            }
+
+        } else { return false }
     }
     
     func validateNameSurname(_ value: String?) -> Bool {
@@ -63,5 +84,14 @@ final class ContactFormDataWorker: ContactFormDataWorkerProtocol {
     func validateDescription(_ value: String?) -> Bool {
         if let val = value, !val.isEmpty, val.count <= 200 { return true }
         else { return false }
+    }
+    
+    func setBadge() {
+        let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Reports")
+        let count = try! managedContext.count(for: fetchRequest)
+
+        
+        UIApplication.shared.applicationIconBadgeNumber = count
     }
 }
