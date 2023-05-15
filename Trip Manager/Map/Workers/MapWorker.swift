@@ -1,5 +1,5 @@
 //
-//  MapListWorker.swift
+//  MapWorker.swift
 //  Trip Manager
 //
 //  Created by Ghenadie Isacenco on 13/5/23.
@@ -8,10 +8,10 @@
 import Foundation
 import MapKit
 
-final class MapListWorker: MapWorkerProtocol {
-    var routes: [RouteModel] = []
+final class MapWorker: MapWorkerProtocol {
+    var routes: [TripModel] = []
     
-    func mapRoutes(_ routes: [RouteRestModel]) {
+    func mapRoutes(_ routes: [TripRestModel]) {
         
         self.routes.removeAll()
         
@@ -23,12 +23,12 @@ final class MapListWorker: MapWorkerProtocol {
         })
         
         let newRoutes = filteredRoutes.compactMap({
-            RouteModel(driverName: $0.driverName ?? "",
+            TripModel(driverName: $0.driverName ?? "",
                        route: $0.route ?? "",
                        description: $0.description ?? "",
                        startTime: Utils.utcStringToDate($0.startTime ?? "") ?? Date(),
                        endTime: Utils.utcStringToDate($0.endTime ?? "") ?? Date(),
-                       status: RouteStatus.getStatusFromString($0.status ?? ""),
+                       status: TripStatus.getStatusFromString($0.status ?? ""),
                        origin: PointModel(lat: $0.origin?.point?.latitude ?? 0, lon: $0.origin?.point?.longitude ?? 0, address: $0.origin?.address ?? ""),
                        destination: PointModel(lat: $0.destination?.point?.latitude ?? 0, lon: $0.destination?.point?.longitude ?? 0, address: $0.destination?.address ?? ""),
                        stops: ($0.stops ?? []).filter({
@@ -47,7 +47,7 @@ final class MapListWorker: MapWorkerProtocol {
         return self.routes.count
     }
     
-    func routeAtIndex(_ index: Int) -> RouteModel? {
+    func routeAtIndex(_ index: Int) -> TripModel? {
         return routes.indices.contains(index) ? routes[index] : nil
     }
     
