@@ -197,7 +197,8 @@
 				E102DE072A0FF9BD00E3EC5E /* UICollectionViewExtensions.swift */,
 				E102DE092A0FFA2500E3EC5E /* UIViewExtension.swift */,
 			);
-			path = Utils;
+			name = Utils;
+			path = Map/Utils;
 			sourceTree = "<group>";
 		};
 		E102DE112A111E4D00E3EC5E /* Views */ = {
