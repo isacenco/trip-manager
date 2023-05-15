@@ -9,7 +9,7 @@ import Foundation
 import MapKit
 
 final class MapPresenter: MapPresenterProtocol {
-    weak var viewController: MapViewControllerProtocol?
+    var viewController: MapViewControllerProtocol?
     
     required init(viewController: MapViewControllerProtocol? = nil) {
         self.viewController = viewController

@@ -11,6 +11,8 @@ import MapKit
 class MapViewController: UIViewController {
     
     var interactor: MapInteractorProtocol?
+    var router: MapRouterProtocol?
+    @IBOutlet weak var btnBug: UIButton!
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -18,12 +20,14 @@ class MapViewController: UIViewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
+        let router = MapRouter(viewController: self)
         let presenter = MapPresenter(viewController: self)
         let listRestWorker = TripsRestWorker()
         let mapWorker = MapWorker()
         let interactor = MapInteractor(presenter: presenter, tripsRestWorker: listRestWorker, mapWorker: mapWorker)
         
         self.interactor = interactor
+        self.router = router
     }
 
     override func viewDidLoad() {
@@ -33,18 +37,29 @@ class MapViewController: UIViewController {
         self.setCollectionViewAdditionalParams()
         self.registerCells()
         self.interactor?.fetchRoutes()
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func showAnnotations(_ annotations: [MKPointAnnotation]) {
         let previousAnnotations = mapView.annotations.filter({ !($0 is MKUserLocation) })
         mapView.removeAnnotations(previousAnnotations)
-        self.mapView.showAnnotations(annotations, animated: false)
+        self.mapView.showAnnotations(annotations, animated: true)
     }
     
     private func configure() {
         mapView.delegate = self
         mapView.layoutMargins = UIEdgeInsets(top: self.view.safeAreaInsets.top, left: 0, bottom: self.view.safeAreaInsets.bottom + self.collectionView.frame.size.height, right: 0)
         //mapView.register(MKAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        
+        btnBug.setTitle("", for: .normal)
+        btnBug.layer.borderWidth = 1
+        btnBug.layer.borderColor = UIColor.lightGray.cgColor
+        btnBug.layer.cornerRadius = 5
+    }
+    
+    @IBAction func bugAction(_ sender: Any) {
+        self.router?.showContactForm()
     }
 }
 

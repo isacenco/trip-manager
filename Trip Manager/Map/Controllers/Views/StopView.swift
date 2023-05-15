@@ -9,11 +9,8 @@ import UIKit
 
 class StopView: UIView {
 
-    @IBOutlet weak var lblUser: UILabel!
     @IBOutlet weak var lblUserName: UILabel!
-    @IBOutlet weak var lblAddr: UILabel!
     @IBOutlet weak var lblAddress: UILabel!
-    @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var lblPriceValue: UILabel!
     @IBOutlet weak var lblPaid: UILabel!
     @IBOutlet weak var lblPaidStatus: UILabel!
@@ -52,13 +49,12 @@ class StopView: UIView {
     }
     
     private func setValues(with model: StopRest) {
-        lblUser.text = "Name:"
+
         lblUserName.text = model.userName
-        lblAddr.text = "Addr.:"
+
         lblAddress.text = model.address
-        lblPrice.text = "Price:"
+
         lblPriceValue.text = String(format: "%.1f", model.price ?? 0) + "€"
-        lblPaid.text = "Status:"
         lblPaidStatus.text = model.paid ?? false ? "Paid" : "Pending"
         
         let customViewRect: CGRect = self.frame;

@@ -19,6 +19,24 @@
 		E102DE132A111F8E00E3EC5E /* StopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE122A111F8E00E3EC5E /* StopView.swift */; };
 		E102DE152A111FBA00E3EC5E /* StopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E102DE142A111FBA00E3EC5E /* StopView.xib */; };
 		E102DE182A11375900E3EC5E /* StopPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE172A11375900E3EC5E /* StopPointAnnotation.swift */; };
+		E102DE1C2A11FD6600E3EC5E /* ContactForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E102DE1B2A11FD6600E3EC5E /* ContactForm.storyboard */; };
+		E102DE1F2A11FD8D00E3EC5E /* ContactFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE1E2A11FD8D00E3EC5E /* ContactFormViewController.swift */; };
+		E102DE222A11FDE000E3EC5E /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE212A11FDE000E3EC5E /* MapRouter.swift */; };
+		E102DE242A11FF7600E3EC5E /* MapRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE232A11FF7600E3EC5E /* MapRouterProtocol.swift */; };
+		E102DE272A11FFE200E3EC5E /* ContactFormRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE262A11FFE200E3EC5E /* ContactFormRouter.swift */; };
+		E102DE2A2A11FFFE00E3EC5E /* ContactFormRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE292A11FFFE00E3EC5E /* ContactFormRouterProtocol.swift */; };
+		E102DE2D2A12012F00E3EC5E /* ContactFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE2C2A12012E00E3EC5E /* ContactFormPresenter.swift */; };
+		E102DE2F2A12014500E3EC5E /* ContactFormPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE2E2A12014500E3EC5E /* ContactFormPresenterProtocol.swift */; };
+		E102DE312A1201A800E3EC5E /* ContactFormViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE302A1201A800E3EC5E /* ContactFormViewControllerProtocol.swift */; };
+		E102DE332A1202DA00E3EC5E /* ContactFormInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE322A1202DA00E3EC5E /* ContactFormInteractorProtocol.swift */; };
+		E102DE362A1202FD00E3EC5E /* ContactFormInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE352A1202FD00E3EC5E /* ContactFormInteractor.swift */; };
+		E102DE392A12262400E3EC5E /* ContactFormDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE382A12262400E3EC5E /* ContactFormDataWorker.swift */; };
+		E102DE3B2A12264B00E3EC5E /* ContactFormDataWorkerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE3A2A12264B00E3EC5E /* ContactFormDataWorkerProtocol.swift */; };
+		E102DE3E2A12327A00E3EC5E /* ContactFormFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE3D2A12327A00E3EC5E /* ContactFormFieldModel.swift */; };
+		E102DE442A1237B800E3EC5E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE432A1237B800E3EC5E /* CoreDataStack.swift */; };
+		E102DE4B2A1239DE00E3EC5E /* Reports+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE4A2A1239DE00E3EC5E /* Reports+CoreDataProperties.swift */; };
+		E102DE4C2A1239DE00E3EC5E /* Reports+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE492A1239DE00E3EC5E /* Reports+CoreDataClass.swift */; };
+		E102DE4D2A123D7000E3EC5E /* Reports.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = E102DE3F2A12379200E3EC5E /* Reports.xcdatamodeld */; };
 		E15DE75D2A0F9DCC00E5AD30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE75C2A0F9DCC00E5AD30 /* AppDelegate.swift */; };
 		E15DE75F2A0F9DCC00E5AD30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE75E2A0F9DCC00E5AD30 /* SceneDelegate.swift */; };
 		E15DE7612A0F9DCC00E5AD30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE7602A0F9DCC00E5AD30 /* ViewController.swift */; };
@@ -80,6 +98,24 @@
 		E102DE122A111F8E00E3EC5E /* StopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopView.swift; sourceTree = "<group>"; };
 		E102DE142A111FBA00E3EC5E /* StopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StopView.xib; sourceTree = "<group>"; };
 		E102DE172A11375900E3EC5E /* StopPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPointAnnotation.swift; sourceTree = "<group>"; };
+		E102DE1B2A11FD6600E3EC5E /* ContactForm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactForm.storyboard; sourceTree = "<group>"; };
+		E102DE1E2A11FD8D00E3EC5E /* ContactFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewController.swift; sourceTree = "<group>"; };
+		E102DE212A11FDE000E3EC5E /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		E102DE232A11FF7600E3EC5E /* MapRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouterProtocol.swift; sourceTree = "<group>"; };
+		E102DE262A11FFE200E3EC5E /* ContactFormRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormRouter.swift; sourceTree = "<group>"; };
+		E102DE292A11FFFE00E3EC5E /* ContactFormRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormRouterProtocol.swift; sourceTree = "<group>"; };
+		E102DE2C2A12012E00E3EC5E /* ContactFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormPresenter.swift; sourceTree = "<group>"; };
+		E102DE2E2A12014500E3EC5E /* ContactFormPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormPresenterProtocol.swift; sourceTree = "<group>"; };
+		E102DE302A1201A800E3EC5E /* ContactFormViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewControllerProtocol.swift; sourceTree = "<group>"; };
+		E102DE322A1202DA00E3EC5E /* ContactFormInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormInteractorProtocol.swift; sourceTree = "<group>"; };
+		E102DE352A1202FD00E3EC5E /* ContactFormInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormInteractor.swift; sourceTree = "<group>"; };
+		E102DE382A12262400E3EC5E /* ContactFormDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormDataWorker.swift; sourceTree = "<group>"; };
+		E102DE3A2A12264B00E3EC5E /* ContactFormDataWorkerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormDataWorkerProtocol.swift; sourceTree = "<group>"; };
+		E102DE3D2A12327A00E3EC5E /* ContactFormFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormFieldModel.swift; sourceTree = "<group>"; };
+		E102DE402A12379200E3EC5E /* Reports.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reports.xcdatamodel; sourceTree = "<group>"; };
+		E102DE432A1237B800E3EC5E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		E102DE492A1239DE00E3EC5E /* Reports+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Reports+CoreDataClass.swift"; path = "/Users/isacenco/GitHub/trip-manager/Trip Manager/ContactForm/CoreData/Reports+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		E102DE4A2A1239DE00E3EC5E /* Reports+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Reports+CoreDataProperties.swift"; path = "/Users/isacenco/GitHub/trip-manager/Trip Manager/ContactForm/CoreData/Reports+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		E15DE7592A0F9DCC00E5AD30 /* Trip Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trip Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15DE75C2A0F9DCC00E5AD30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E15DE75E2A0F9DCC00E5AD30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +217,109 @@
 			path = Annotations;
 			sourceTree = "<group>";
 		};
+		E102DE192A11FD4700E3EC5E /* ContactForm */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE422A1237A100E3EC5E /* CoreData */,
+				E102DE3C2A12326B00E3EC5E /* Models */,
+				E102DE372A12261100E3EC5E /* Workers */,
+				E102DE342A1202ED00E3EC5E /* Interactors */,
+				E102DE2B2A12011900E3EC5E /* Presenters */,
+				E102DE282A11FFE800E3EC5E /* Protocols */,
+				E102DE252A11FFCF00E3EC5E /* Router */,
+				E102DE1D2A11FD6F00E3EC5E /* Controllers */,
+				E102DE1A2A11FD5000E3EC5E /* Resources */,
+			);
+			path = ContactForm;
+			sourceTree = "<group>";
+		};
+		E102DE1A2A11FD5000E3EC5E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE1B2A11FD6600E3EC5E /* ContactForm.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E102DE1D2A11FD6F00E3EC5E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE1E2A11FD8D00E3EC5E /* ContactFormViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E102DE202A11FDCE00E3EC5E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE212A11FDE000E3EC5E /* MapRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E102DE252A11FFCF00E3EC5E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE262A11FFE200E3EC5E /* ContactFormRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E102DE282A11FFE800E3EC5E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE292A11FFFE00E3EC5E /* ContactFormRouterProtocol.swift */,
+				E102DE2E2A12014500E3EC5E /* ContactFormPresenterProtocol.swift */,
+				E102DE302A1201A800E3EC5E /* ContactFormViewControllerProtocol.swift */,
+				E102DE322A1202DA00E3EC5E /* ContactFormInteractorProtocol.swift */,
+				E102DE3A2A12264B00E3EC5E /* ContactFormDataWorkerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E102DE2B2A12011900E3EC5E /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE2C2A12012E00E3EC5E /* ContactFormPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		E102DE342A1202ED00E3EC5E /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE352A1202FD00E3EC5E /* ContactFormInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		E102DE372A12261100E3EC5E /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE382A12262400E3EC5E /* ContactFormDataWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		E102DE3C2A12326B00E3EC5E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE3D2A12327A00E3EC5E /* ContactFormFieldModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E102DE422A1237A100E3EC5E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E102DE492A1239DE00E3EC5E /* Reports+CoreDataClass.swift */,
+				E102DE4A2A1239DE00E3EC5E /* Reports+CoreDataProperties.swift */,
+				E102DE432A1237B800E3EC5E /* CoreDataStack.swift */,
+				E102DE3F2A12379200E3EC5E /* Reports.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		E15DE7502A0F9DCC00E5AD30 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +345,7 @@
 		E15DE75B2A0F9DCC00E5AD30 /* Trip Manager */ = {
 			isa = PBXGroup;
 			children = (
+				E102DE192A11FD4700E3EC5E /* ContactForm */,
 				E102DE042A0FF97000E3EC5E /* Utils */,
 				E15DE78C2A0FB03400E5AD30 /* Map */,
 				E15DE75C2A0F9DCC00E5AD30 /* AppDelegate.swift */,
@@ -239,6 +379,7 @@
 		E15DE78C2A0FB03400E5AD30 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				E102DE202A11FDCE00E3EC5E /* Router */,
 				E102DE162A11374500E3EC5E /* Annotations */,
 				E15DE7A52A0FBF2400E5AD30 /* Models */,
 				E15DE7A02A0FBC6700E5AD30 /* Workers */,
@@ -295,6 +436,7 @@
 				E15DE7A32A0FBD9B00E5AD30 /* TripListRestWorkerProtocol.swift */,
 				E1AED9352A0FE35400D18204 /* MapWorkerProtocol.swift */,
 				E102DE0F2A11183200E3EC5E /* StopRestWorkerProtocol.swift */,
+				E102DE232A11FF7600E3EC5E /* MapRouterProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -447,6 +589,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E102DE4D2A123D7000E3EC5E /* Reports.xcdatamodeld in Resources */,
+				E102DE1C2A11FD6600E3EC5E /* ContactForm.storyboard in Resources */,
 				E15DE7692A0F9DCD00E5AD30 /* LaunchScreen.storyboard in Resources */,
 				E15DE7662A0F9DCD00E5AD30 /* Assets.xcassets in Resources */,
 				E15DE7AC2A0FD1D500E5AD30 /* RouteCollectionViewCell.xib in Resources */,
@@ -583,17 +727,29 @@
 				E15DE7612A0F9DCC00E5AD30 /* ViewController.swift in Sources */,
 				E15DE79D2A0FB85100E5AD30 /* MapViewControllerProtocol.swift in Sources */,
 				E1AED9342A0FE2AC00D18204 /* MapWorker.swift in Sources */,
+				E102DE362A1202FD00E3EC5E /* ContactFormInteractor.swift in Sources */,
+				E102DE2F2A12014500E3EC5E /* ContactFormPresenterProtocol.swift in Sources */,
 				E15DE7A72A0FBF3400E5AD30 /* TripRestModel.swift in Sources */,
+				E102DE2D2A12012F00E3EC5E /* ContactFormPresenter.swift in Sources */,
+				E102DE392A12262400E3EC5E /* ContactFormDataWorker.swift in Sources */,
 				E15DE7AB2A0FD1D500E5AD30 /* RouteCollectionViewCell.swift in Sources */,
 				E15DE7A22A0FBC7900E5AD30 /* TripsRestWorker.swift in Sources */,
 				E102DE182A11375900E3EC5E /* StopPointAnnotation.swift in Sources */,
 				E1AED9362A0FE35400D18204 /* MapWorkerProtocol.swift in Sources */,
+				E102DE222A11FDE000E3EC5E /* MapRouter.swift in Sources */,
 				E15DE79F2A0FB9E000E5AD30 /* MapPresenterProtocol.swift in Sources */,
+				E102DE3B2A12264B00E3EC5E /* ContactFormDataWorkerProtocol.swift in Sources */,
+				E102DE442A1237B800E3EC5E /* CoreDataStack.swift in Sources */,
 				E15DE75D2A0F9DCC00E5AD30 /* AppDelegate.swift in Sources */,
 				E102DE0C2A11168A00E3EC5E /* StopRestModel.swift in Sources */,
 				E102DE132A111F8E00E3EC5E /* StopView.swift in Sources */,
+				E102DE2A2A11FFFE00E3EC5E /* ContactFormRouterProtocol.swift in Sources */,
+				E102DE3E2A12327A00E3EC5E /* ContactFormFieldModel.swift in Sources */,
 				E15DE75F2A0F9DCC00E5AD30 /* SceneDelegate.swift in Sources */,
 				E102DE0A2A0FFA2500E3EC5E /* UIViewExtension.swift in Sources */,
+				E102DE272A11FFE200E3EC5E /* ContactFormRouter.swift in Sources */,
+				E102DE4C2A1239DE00E3EC5E /* Reports+CoreDataClass.swift in Sources */,
+				E102DE4B2A1239DE00E3EC5E /* Reports+CoreDataProperties.swift in Sources */,
 				E15DE7AE2A0FD28800E5AD30 /* MapViewController+UICollectionView.swift in Sources */,
 				E102DE062A0FF97C00E3EC5E /* Utils.swift in Sources */,
 				E102DE102A11183200E3EC5E /* StopRestWorkerProtocol.swift in Sources */,
@@ -603,8 +759,12 @@
 				E102DE082A0FF9BD00E3EC5E /* UICollectionViewExtensions.swift in Sources */,
 				E15DE7922A0FB37B00E5AD30 /* MapViewController.swift in Sources */,
 				E15DE79B2A0FB7A800E5AD30 /* MapInteractorProtocol.swift in Sources */,
+				E102DE312A1201A800E3EC5E /* ContactFormViewControllerProtocol.swift in Sources */,
+				E102DE332A1202DA00E3EC5E /* ContactFormInteractorProtocol.swift in Sources */,
 				E102DE0E2A11177D00E3EC5E /* StopRestWorker.swift in Sources */,
 				E15DE7972A0FB5EE00E5AD30 /* MapPresenter.swift in Sources */,
+				E102DE1F2A11FD8D00E3EC5E /* ContactFormViewController.swift in Sources */,
+				E102DE242A11FF7600E3EC5E /* MapRouterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -950,6 +1110,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E102DE3F2A12379200E3EC5E /* Reports.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E102DE402A12379200E3EC5E /* Reports.xcdatamodel */,
+			);
+			currentVersion = E102DE402A12379200E3EC5E /* Reports.xcdatamodel */;
+			path = Reports.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E15DE7512A0F9DCC00E5AD30 /* Project object */;
 }
