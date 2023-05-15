@@ -39,6 +39,19 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="hIz-Cz-ne5"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dg-L3-M4z">
+                                <rect key="frame" x="330" y="57" width="35" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="E9D-nn-h0a"/>
+                                    <constraint firstAttribute="width" constant="35" id="Scb-pd-1oS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ladybug" catalog="system"/>
+                                <connections>
+                                    <action selector="bugAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Mci-EK-hla"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -47,13 +60,17 @@
                             <constraint firstAttribute="bottom" secondItem="gmO-bB-2C7" secondAttribute="bottom" id="COl-im-ygj"/>
                             <constraint firstItem="gmO-bB-2C7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CgW-dC-W1A"/>
                             <constraint firstItem="8Mm-l6-T48" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EX8-F0-bBn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9dg-L3-M4z" secondAttribute="trailing" constant="10" id="Fqt-gi-Wb3"/>
                             <constraint firstItem="gmO-bB-2C7" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Owg-9q-RUM"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8Mm-l6-T48" secondAttribute="bottom" id="aEp-hr-Itf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gmO-bB-2C7" secondAttribute="trailing" id="lhc-qF-mTg"/>
+                            <constraint firstItem="9dg-L3-M4z" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="zoK-dB-CBC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bWi-AZ-85K"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="btnBug" destination="9dg-L3-M4z" id="JkG-WV-tOd"/>
                         <outlet property="collectionView" destination="8Mm-l6-T48" id="gS0-1M-h2o"/>
                         <outlet property="mapView" destination="gmO-bB-2C7" id="WQZ-qI-neh"/>
                     </connections>
@@ -82,6 +99,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ladybug" catalog="system" width="128" height="122"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
