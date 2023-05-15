@@ -37,6 +37,9 @@
 		E102DE4B2A1239DE00E3EC5E /* Reports+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE4A2A1239DE00E3EC5E /* Reports+CoreDataProperties.swift */; };
 		E102DE4C2A1239DE00E3EC5E /* Reports+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DE492A1239DE00E3EC5E /* Reports+CoreDataClass.swift */; };
 		E102DE4D2A123D7000E3EC5E /* Reports.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = E102DE3F2A12379200E3EC5E /* Reports.xcdatamodeld */; };
+		E102DECD2A129A5800E3EC5E /* MapWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DECC2A129A5800E3EC5E /* MapWorkerTests.swift */; };
+		E102DECF2A129E8600E3EC5E /* TripRestWorketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DECE2A129E8600E3EC5E /* TripRestWorketTests.swift */; };
+		E102DED12A12A82B00E3EC5E /* StopRestWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DED02A12A82B00E3EC5E /* StopRestWorkerTests.swift */; };
 		E15DE75D2A0F9DCC00E5AD30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE75C2A0F9DCC00E5AD30 /* AppDelegate.swift */; };
 		E15DE75F2A0F9DCC00E5AD30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE75E2A0F9DCC00E5AD30 /* SceneDelegate.swift */; };
 		E15DE7612A0F9DCC00E5AD30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE7602A0F9DCC00E5AD30 /* ViewController.swift */; };
@@ -116,6 +119,9 @@
 		E102DE432A1237B800E3EC5E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		E102DE492A1239DE00E3EC5E /* Reports+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Reports+CoreDataClass.swift"; path = "/Users/isacenco/GitHub/trip-manager/Trip Manager/ContactForm/CoreData/Reports+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		E102DE4A2A1239DE00E3EC5E /* Reports+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Reports+CoreDataProperties.swift"; path = "/Users/isacenco/GitHub/trip-manager/Trip Manager/ContactForm/CoreData/Reports+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		E102DECC2A129A5800E3EC5E /* MapWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWorkerTests.swift; sourceTree = "<group>"; };
+		E102DECE2A129E8600E3EC5E /* TripRestWorketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRestWorketTests.swift; sourceTree = "<group>"; };
+		E102DED02A12A82B00E3EC5E /* StopRestWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopRestWorkerTests.swift; sourceTree = "<group>"; };
 		E15DE7592A0F9DCC00E5AD30 /* Trip Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trip Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15DE75C2A0F9DCC00E5AD30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E15DE75E2A0F9DCC00E5AD30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -321,6 +327,16 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		E102DECB2A129A4400E3EC5E /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				E102DECC2A129A5800E3EC5E /* MapWorkerTests.swift */,
+				E102DECE2A129E8600E3EC5E /* TripRestWorketTests.swift */,
+				E102DED02A12A82B00E3EC5E /* StopRestWorkerTests.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		E15DE7502A0F9DCC00E5AD30 = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +379,7 @@
 		E15DE7722A0F9DCE00E5AD30 /* Trip ManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				E102DECB2A129A4400E3EC5E /* Map */,
 				E15DE7732A0F9DCE00E5AD30 /* Trip_ManagerTests.swift */,
 			);
 			path = "Trip ManagerTests";
@@ -773,6 +790,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E102DECD2A129A5800E3EC5E /* MapWorkerTests.swift in Sources */,
+				E102DED12A12A82B00E3EC5E /* StopRestWorkerTests.swift in Sources */,
+				E102DECF2A129E8600E3EC5E /* TripRestWorketTests.swift in Sources */,
 				E15DE7742A0F9DCE00E5AD30 /* Trip_ManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
