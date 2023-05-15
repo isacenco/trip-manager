@@ -44,7 +44,7 @@ class MapViewController: UIViewController {
     func showAnnotations(_ annotations: [MKPointAnnotation]) {
         let previousAnnotations = mapView.annotations.filter({ !($0 is MKUserLocation) })
         mapView.removeAnnotations(previousAnnotations)
-        self.mapView.showAnnotations(annotations, animated: false)
+        self.mapView.showAnnotations(annotations, animated: true)
     }
     
     private func configure() {

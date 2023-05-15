@@ -16,9 +16,6 @@ enum ContactFormFieldType {
 }
 
 final class ContactFormViewController: UIViewController, ContactFormViewControllerProtocol {
-    
-    
-    
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfSurname: UITextField!
     @IBOutlet weak var tfEmail: UITextField!
