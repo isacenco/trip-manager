@@ -8,12 +8,15 @@
 import Foundation
 
 final class ContactFormPresenter: ContactFormPresenterProtocol {
+    
+    //MARK: - Vars
     var viewController: ContactFormViewControllerProtocol
     
     required init(viewController: ContactFormViewControllerProtocol) {
         self.viewController = viewController
     }
     
+    //MARK: - Protocol Methods
     func fieldStatus(_ value: Bool, type: ContactFormFieldType) {
         value ? viewController.showCorrectField(type) : viewController.showErrorField(type)
     }

@@ -7,14 +7,6 @@
 
 import UIKit
 
-enum ContactFormFieldType {
-    case name
-    case surname
-    case email
-    case phone
-    case description
-}
-
 final class ContactFormViewController: UIViewController, ContactFormViewControllerProtocol {
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfSurname: UITextField!
@@ -23,71 +15,19 @@ final class ContactFormViewController: UIViewController, ContactFormViewControll
     @IBOutlet weak var tvDescription: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
-    
-    var interator: ContactFormInteractorProtocol?
-
     @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
+    
+        // MARK: - Vars
+    var interator: ContactFormInteractorProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         configure()
         addListerens()
     }
     
-    func configure() {
-        tvDescription.layer.borderWidth = 1
-        tvDescription.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1).cgColor
-        tvDescription.layer.cornerRadius = 4
-        
-        tfName.layer.borderWidth = 1
-        tfName.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1).cgColor
-        tfName.layer.cornerRadius = 4
-        
-        tfSurname.layer.borderWidth = 1
-        tfSurname.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1).cgColor
-        tfSurname.layer.cornerRadius = 4
-        
-        tfEmail.layer.borderWidth = 1
-        tfEmail.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1).cgColor
-        tfEmail.layer.cornerRadius = 4
-        
-        tfPhone.layer.borderWidth = 1
-        tfPhone.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1).cgColor
-        tfPhone.layer.cornerRadius = 4
-    }
-    
-    func addListerens() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
-        self.view.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-
-            scrollViewBottomConstraint.constant = -keyboardSize.height
-            scrollView.contentSize = contentView.frame.size
-        }
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        scrollViewBottomConstraint.constant = 0
-    }
-    
-    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
-        resignAllResponders()
-    }
-    
-    private func resignAllResponders() {
-        tfName.resignFirstResponder()
-        tfSurname.resignFirstResponder()
-        tfEmail.resignFirstResponder()
-        tfPhone.resignFirstResponder()
-        tvDescription.resignFirstResponder()
-    }
-    
+    // MARK: - Protocol Methods
     func showCorrectField(_ type: ContactFormFieldType) {
         switch type {
         case .name:
@@ -126,6 +66,46 @@ final class ContactFormViewController: UIViewController, ContactFormViewControll
         self.present(alert, animated: true, completion: nil)
     }
     
+    // MARK: - Private Methods
+    private func configure() {
+        setBorder(forView: tfName)
+        setBorder(forView: tfSurname)
+        setBorder(forView: tfEmail)
+        setBorder(forView: tfPhone)
+        setBorder(forView: tvDescription)
+    }
+    
+    private func addListerens() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            scrollViewBottomConstraint.constant = -keyboardSize.height
+            scrollView.contentSize = contentView.frame.size
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        scrollViewBottomConstraint.constant = 0
+    }
+    
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        resignAllResponders()
+    }
+    
+    private func resignAllResponders() {
+        tfName.resignFirstResponder()
+        tfSurname.resignFirstResponder()
+        tfEmail.resignFirstResponder()
+        tfPhone.resignFirstResponder()
+        tvDescription.resignFirstResponder()
+    }
+    
     private func greenOutline(view: UIView) {
         view.layer.borderColor = UIColor.green.cgColor
         view.layer.borderWidth = 1
@@ -134,6 +114,12 @@ final class ContactFormViewController: UIViewController, ContactFormViewControll
     private func redOutline(view: UIView) {
         view.layer.borderColor = UIColor.red.cgColor
         view.layer.borderWidth = 1
+    }
+    
+    private func setBorder(forView view: UIView) {
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1).cgColor
+        view.layer.cornerRadius = 4
     }
     
     @IBAction func sendAction(_ sender: Any) {
