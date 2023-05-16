@@ -11,8 +11,10 @@ import UserNotifications
 import UIKit
 
 final class ContactFormDataWorker: ContactFormDataWorkerProtocol {
-    
+    // MARK: - Vars
     var reports = [Reports]()
+    
+    // MARK: - Protocol Methods
     func validateField(type: ContactFormFieldType, value: String?) -> Bool {
         switch type {
         case .name:
@@ -56,12 +58,14 @@ final class ContactFormDataWorker: ContactFormDataWorkerProtocol {
         } else { return false }
     }
     
-    func validateNameSurname(_ value: String?) -> Bool {
+    // MARK: - Private Methods
+    
+    private func validateNameSurname(_ value: String?) -> Bool {
         if let val = value, !val.isEmpty { return true }
         else { return false }
     }
     
-    func validateEmail(_ value: String?) -> Bool {
+    private func validateEmail(_ value: String?) -> Bool {
         guard let email = value else { return false }
         
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -70,7 +74,7 @@ final class ContactFormDataWorker: ContactFormDataWorkerProtocol {
         return emailPred.evaluate(with: email)
     }
     
-    func validatePhone(_ value: String?) -> Bool {
+    private func validatePhone(_ value: String?) -> Bool {
         guard let phone = value else { return false }
         
         if phone.isEmpty { return true }
@@ -81,17 +85,16 @@ final class ContactFormDataWorker: ContactFormDataWorkerProtocol {
         return result
     }
     
-    func validateDescription(_ value: String?) -> Bool {
+    private func validateDescription(_ value: String?) -> Bool {
         if let val = value, !val.isEmpty, val.count <= 200 { return true }
         else { return false }
     }
     
-    func setBadge() {
+    private func setBadge() {
         let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Reports")
         let count = try! managedContext.count(for: fetchRequest)
 
-        
         UIApplication.shared.applicationIconBadgeNumber = count
     }
 }

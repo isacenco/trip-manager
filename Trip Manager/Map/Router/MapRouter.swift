@@ -8,12 +8,15 @@
 import Foundation
 
 final class MapRouter: MapRouterProtocol {
+    
+    // MARK: - Vars
     var viewController: MapViewController
     
     required init(viewController: MapViewController) {
         self.viewController = viewController
     }
     
+    // MARK: - Protocol Methods
     func showContactForm() {
         if let contactController = ContactFormRouter().getView() {
             contactController.modalPresentationStyle = .fullScreen

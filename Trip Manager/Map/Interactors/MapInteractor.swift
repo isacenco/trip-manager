@@ -8,6 +8,8 @@
 import Foundation
 
 final class MapInteractor: MapInteractorProtocol {
+    
+    // MARK: - Vars
     var presenter: MapPresenterProtocol?
     var tripsRestWorker: TripListRestWorkerProtocol?
     var mapWorker: MapWorkerProtocol?
@@ -18,6 +20,7 @@ final class MapInteractor: MapInteractorProtocol {
         self.mapWorker = mapWorker
     }
     
+    // MARK: - Protocol Methods
     func fetchRoutes() {
         presenter?.startLoading()
         

@@ -40,6 +40,7 @@
 		E102DECD2A129A5800E3EC5E /* MapWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DECC2A129A5800E3EC5E /* MapWorkerTests.swift */; };
 		E102DECF2A129E8600E3EC5E /* TripRestWorketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DECE2A129E8600E3EC5E /* TripRestWorketTests.swift */; };
 		E102DED12A12A82B00E3EC5E /* StopRestWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DED02A12A82B00E3EC5E /* StopRestWorkerTests.swift */; };
+		E102DED32A134FE200E3EC5E /* ContactFormFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102DED22A134FE200E3EC5E /* ContactFormFieldType.swift */; };
 		E15DE75D2A0F9DCC00E5AD30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE75C2A0F9DCC00E5AD30 /* AppDelegate.swift */; };
 		E15DE75F2A0F9DCC00E5AD30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE75E2A0F9DCC00E5AD30 /* SceneDelegate.swift */; };
 		E15DE7612A0F9DCC00E5AD30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15DE7602A0F9DCC00E5AD30 /* ViewController.swift */; };
@@ -122,6 +123,7 @@
 		E102DECC2A129A5800E3EC5E /* MapWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWorkerTests.swift; sourceTree = "<group>"; };
 		E102DECE2A129E8600E3EC5E /* TripRestWorketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRestWorketTests.swift; sourceTree = "<group>"; };
 		E102DED02A12A82B00E3EC5E /* StopRestWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopRestWorkerTests.swift; sourceTree = "<group>"; };
+		E102DED22A134FE200E3EC5E /* ContactFormFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormFieldType.swift; sourceTree = "<group>"; };
 		E15DE7592A0F9DCC00E5AD30 /* Trip Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trip Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15DE75C2A0F9DCC00E5AD30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E15DE75E2A0F9DCC00E5AD30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				E102DE3D2A12327A00E3EC5E /* ContactFormFieldModel.swift */,
+				E102DED22A134FE200E3EC5E /* ContactFormFieldType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -771,6 +774,7 @@
 				E15DE7AE2A0FD28800E5AD30 /* MapViewController+UICollectionView.swift in Sources */,
 				E102DE062A0FF97C00E3EC5E /* Utils.swift in Sources */,
 				E102DE102A11183200E3EC5E /* StopRestWorkerProtocol.swift in Sources */,
+				E102DED32A134FE200E3EC5E /* ContactFormFieldType.swift in Sources */,
 				E1AED9322A0FDEE900D18204 /* TripModel.swift in Sources */,
 				E15DE7A42A0FBD9B00E5AD30 /* TripListRestWorkerProtocol.swift in Sources */,
 				E15DE7952A0FB5C600E5AD30 /* MapInteractor.swift in Sources */,
