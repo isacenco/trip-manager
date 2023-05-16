@@ -32,6 +32,7 @@ class StopView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        
         self.layer.borderColor = UIColor.lightGray.cgColor
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 5
@@ -49,9 +50,7 @@ class StopView: UIView {
     }
     
     private func setValues(with model: StopRest) {
-
         lblUserName.text = model.userName
-
         lblAddress.text = model.address
 
         lblPriceValue.text = String(format: "%.1f", model.price ?? 0) + "€"
@@ -61,5 +60,4 @@ class StopView: UIView {
         let rect: CGRect = CGRectMake(-customViewRect.size.height/2, -customViewRect.size.height-40, customViewRect.size.width, customViewRect.size.height);
         self.frame = rect;
     }
-    
 }

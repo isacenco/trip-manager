@@ -9,12 +9,15 @@ import Foundation
 import MapKit
 
 final class MapPresenter: MapPresenterProtocol {
+    
+    // MARK: - Vars
     var viewController: MapViewControllerProtocol?
     
     required init(viewController: MapViewControllerProtocol? = nil) {
         self.viewController = viewController
     }
     
+    // MARK: - Protocol Methods
     func startLoading() {
         self.viewController?.startLoading()
     }
